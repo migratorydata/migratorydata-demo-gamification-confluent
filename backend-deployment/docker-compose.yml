@@ -24,7 +24,7 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,PLAINTEXT_HOST://192.168.5.190:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
@@ -67,6 +67,6 @@ services:
     environment:
       MIGRATORYDATA_JAVA_EXTRA_OPTS: '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap'
       MIGRATORYDATA_EXTRA_OPTS: '-DMemory=128MB -DLogLevel=INFO -DX.ConnectionOffload=true'
-      MIGRATORYDATA_KAFKA_EXTRA_OPTS: '-Dbootstrap.servers=broker:29092 -Dtopics=question,result,top,live'
+      MIGRATORYDATA_KAFKA_EXTRA_OPTS: '-Dbootstrap.servers=broker:9092 -Dtopics=question,result,top,live'
     volumes:
       - ../frontend:/migratorydata-ke/html
