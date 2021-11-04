@@ -56,17 +56,17 @@ services:
     volumes:
       - ../:/ksql-gamification-streams
 
-  migratorydata-ke:
-    image: migratorydata/migratorydata-ke
-    hostname: migratorydata-ke
-    container_name: migratorydata-ke
+  migratorydata:
+    image: migratorydata/server
+    hostname: migratorydata
+    container_name: migratorydata
     depends_on:
       - broker
     ports:
       - "8800:8800"
     environment:
       MIGRATORYDATA_JAVA_EXTRA_OPTS: '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap'
-      MIGRATORYDATA_EXTRA_OPTS: '-DMemory=128MB -DLogLevel=INFO -DX.ConnectionOffload=true'
+      MIGRATORYDATA_EXTRA_OPTS: '-DMemory=128MB -DLogLevel=INFO -DX.ConnectionOffload=true -DClusterEngine=kafka'
       MIGRATORYDATA_KAFKA_EXTRA_OPTS: '-Dbootstrap.servers=broker:9092 -Dtopics=question,result,top,live'
     volumes:
-      - ../frontend:/migratorydata-ke/html
+      - ../frontend:/migratorydata/html
