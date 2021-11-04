@@ -1,8 +1,8 @@
-This repository contains a demo application for gamification as detailed in the article [Building a Realtime Gamification Feature that Scales to Millions of Devices using MigratoryData, Kafka, and WebSockets: A look at Watch’NPlay Interactive Game](#). The folder `frontend` contains the source code of the UI. The folder `backend-deployment` contains the docker-compose file for running the Kafka, Ksqldb and MigratoryData-KE deployment.
+This repository contains a demo application for gamification as detailed in the article [Real-time Gaming Infrastructure for Millions of Users with Kafka, KSQL, and WebSockets](#). The folder `frontend` contains the source code of the UI. The folder `backend-deployment` contains the docker-compose file for running the Kafka, Ksqldb and MigratoryData deployment.
 
 ### How to run:
 
-- Start Kafka, Ksqldb and Migratorydata-ke using docker-compose.yml file from backend-deployment running command:
+- Start Kafka, Ksqldb and Migratorydata using docker-compose.yml file from backend-deployment running command:
 
       docker-compose up
 
