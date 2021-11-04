@@ -57,7 +57,7 @@ services:
       - ../:/ksql-gamification-streams
 
   migratorydata:
-    image: migratorydata/server
+    image: migratorydata/server:latest
     hostname: migratorydata
     container_name: migratorydata
     depends_on:

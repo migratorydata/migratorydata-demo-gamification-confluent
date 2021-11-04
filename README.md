@@ -2,8 +2,10 @@ This repository contains a demo application for gamification as detailed in the 
 
 ### How to run:
 
-- Start Kafka, Ksqldb and Migratorydata using docker-compose.yml file from backend-deployment running command:
+- Get the latest docker image for MigratoryData server using the following command:
+      docker-compose pull
 
+- Start Kafka, Ksqldb and Migratorydata using docker-compose.yml file from backend-deployment running command:
       docker-compose up
 
 - Add ksql streams from file KSQL-GAMIFICATION-STREAMS.sql:
@@ -21,3 +23,6 @@ This repository contains a demo application for gamification as detailed in the 
       docker exec -it ksqldb-cli ksql --execute "INSERT INTO INPUT_QUESTION (id, question, answers, answer, points) VALUES ('id-3', 'Who will win this game?', ARRAY['Simona Halep', 'Sloane Stephens'], 'Sloane Stephens', 100)" http://ksqldb-server:8088
 
 - Answer to the published question in the browser.
+
+- Remove stopped containers and volumes created for this demo running the command:
+      docker-compose rm -v
