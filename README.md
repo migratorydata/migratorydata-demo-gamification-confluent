@@ -1,4 +1,8 @@
-This repository contains a demo application for gamification as detailed in the article [Real-time Gaming Infrastructure for Millions of Users with Kafka, KSQL, and WebSockets](#). The folder `frontend` contains the source code of the UI. The folder `backend-deployment` contains the docker-compose file for running the Kafka, Ksqldb and MigratoryData deployment.
+This repository contains a demo application for gamification as detailed in the blog post[Real-time Gaming Infrastructure for Millions of Users with Kafka, KSQL, and WebSockets](https://www.confluent.io/blog/real-time-gaming-infrastructure-kafka-ksqldb-websockets/). See this demo live at:
+
+<a href="https://migratorydata.com/live-demo/realtime-gamification/" target="_blank"><img src="https://migratorydata.com/images/blog/2021/08/migratorydata-live-demo-gamfication.png" width="70%"/></a>
+
+The folder `frontend` contains the source code of the UI. The folder `backend-deployment` contains the docker-compose file for running the Kafka, Ksqldb and MigratoryData deployment.
 
 ### How to run:
 
